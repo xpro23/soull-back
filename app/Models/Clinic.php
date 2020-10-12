@@ -22,6 +22,10 @@ class Clinic extends Model
         'status'
     ];
 
+    public function address() {
+        return  $this->hasMany(Address::class, 'id', 'id_adress');
+    }
+
     public $timestamps = false;
 }
 
